@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
         imageUrl:
           'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         createdDate: new Date(),
-        snaps: 0,
+        snaps: 150,
         location: 'dans un champs',
       },
 
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
         imageUrl:
           'https://tse1.mm.bing.net/th?id=OIP.UGe0hDgOlhZCZJhjMiiCjwHaEK&pid=Api&P=0&w=332&h=186',
         createdDate: new Date(),
-        snaps: 0,
+        snaps: 30,
       },
 
       {
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
         imageUrl:
           'https://tse4.mm.bing.net/th?id=OIP.mUibgH7zai54OhVoxBwJIwHaE6&pid=Api&P=0&w=247&h=164',
         createdDate: new Date(),
-        snaps: 0,
+        snaps: 60,
       },
 
       {
@@ -49,8 +49,8 @@ export class AppComponent implements OnInit {
       },
 
       {
-        title: 'Ecurueil et mais',
-        description: 'un écurueil qui mange',
+        title: 'Ecureuil et mais',
+        description: 'un écureuil qui mange',
         imageUrl:
           'https://tse3.mm.bing.net/th?id=OIP.Wwg5-gXddv7O6NA7mnm8iwHaDw&pid=Api&P=0&w=311&h=158',
         createdDate: new Date(),
