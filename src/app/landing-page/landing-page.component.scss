@@ -1,0 +1,14 @@
+button {
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: aquamarine;
+  }
+
+  button:hover {
+    background-color: rgb(40, 139, 185);
+  }
+
+  button:active {
+    box-shadow: inset 10px 10px blue;
+  }

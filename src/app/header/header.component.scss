@@ -4,3 +4,17 @@ h1 {
     border: blue solid 3px;
     text-shadow: rgb(102, 196, 228) 5px 5px;
 }
+
+a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .active {
+    color: #666;
+    text-decoration: underline;
+  }
