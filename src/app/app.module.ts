@@ -10,11 +10,14 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
+import { AuthService } from './services/auth.service';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
-  declarations: [AppComponent, FaceSnapComponent, FaceSnapListComponent, HeaderComponent, LandingPageComponent, SingleFaceSnapComponent],
+  declarations: [AppComponent, FaceSnapComponent, FaceSnapListComponent, HeaderComponent, LandingPageComponent, SingleFaceSnapComponent, AuthComponent],
   imports: [BrowserModule,AppRoutingModule],
-  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' },
+                AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

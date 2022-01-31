@@ -1,0 +1,5 @@
+<div class="auth">
+    <h3>Authentification : </h3>
+    <button class="valid" *ngIf="!authStatus" (click)="onSignIn()">Se connecter</button>
+    <button class="unvalid" *ngIf="authStatus" (click)="onSignOut()">Se déconnecter</button>
+</div>

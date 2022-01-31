@@ -1,0 +1,31 @@
+.auth {
+    width: 50%;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px dashed blue;
+}
+
+button {
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    align-self: center;
+  }
+
+  button:hover {
+    background-color: grey;
+  }
+
+  button:active {
+    box-shadow: inset 10px 10px rgb(10, 80, 33);
+  }
+
+.valid {
+    background-color: rgb(110, 207, 110);
+}
+
+.unvalid {
+    background-color: rgb(248, 2, 2);
+}
