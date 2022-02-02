@@ -12,12 +12,22 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
 import { AuthService } from './services/auth.service';
 import { AuthComponent } from './auth/auth.component';
+import { AddSnapFaceComponent } from './add-snap-face/add-snap-face.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, FaceSnapComponent, FaceSnapListComponent, HeaderComponent, LandingPageComponent, SingleFaceSnapComponent, AuthComponent],
-  imports: [BrowserModule,AppRoutingModule],
-  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' },
-                AuthService],
+  declarations: [
+    AppComponent,
+    FaceSnapComponent,
+    FaceSnapListComponent,
+    HeaderComponent,
+    LandingPageComponent,
+    SingleFaceSnapComponent,
+    AuthComponent,
+    AddSnapFaceComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

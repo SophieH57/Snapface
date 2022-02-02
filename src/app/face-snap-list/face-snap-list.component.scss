@@ -1,0 +1,15 @@
+button {
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(231, 40, 199);
+    margin-top: 50px;
+  }
+
+  button:hover {
+    background-color: rgb(148, 19, 126);
+  }
+
+  button:active {
+    box-shadow: inset 10px 10px rgb(150, 4, 125);
+  }

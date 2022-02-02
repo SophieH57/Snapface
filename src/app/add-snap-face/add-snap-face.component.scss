@@ -1,0 +1,20 @@
+label {
+  color: grey;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  align-self: center;
+  background-color: pink;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+button:active {
+  box-shadow: inset 10px 10px rgb(10, 80, 33);
+}
