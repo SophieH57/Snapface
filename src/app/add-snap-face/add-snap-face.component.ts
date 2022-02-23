@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { FaceSnap } from '../models/face-snap.model';
+import { FaceSnapsService } from '../services/face-snaps.service';
 
 @Component({
   selector: 'app-add-snap-face',
@@ -8,20 +10,30 @@ import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 })
 export class AddSnapFaceComponent implements OnInit {
   addForm!: FormGroup;
+  fs!: FaceSnap;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private faceSnapsService: FaceSnapsService
+  ) {}
 
   ngOnInit(): void {
+    this.fs = new FaceSnap();
+
     this.addForm = this.fb.group({
       title: [],
       description: [],
       imageUrl: [],
       createdDate: [],
-      location: []
-    })
+      location: [],
+    });
   }
 
   onSubmit() {
     console.log(this.addForm.value);
+  }
+
+  save() {
+    this.faceSnapsService.postSnap(this.fs).subscribe();
   }
 }

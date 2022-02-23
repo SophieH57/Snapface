@@ -13,7 +13,7 @@ import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.com
 import { AuthService } from './services/auth.service';
 import { AuthComponent } from './auth/auth.component';
 import { AddSnapFaceComponent } from './add-snap-face/add-snap-face.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }, AuthService],
   bootstrap: [AppComponent],

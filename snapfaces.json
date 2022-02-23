@@ -53,6 +53,13 @@
       "createdDate": 20210425,
       "snaps": 0,
       "location": "Strasbourg"
+    },
+    {
+      "id": "bonjour",
+      "description": "bonjour",
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg",
+      "createdDate": "23/02/2022",
+      "location": "Metz"
     }
   ]
 }
