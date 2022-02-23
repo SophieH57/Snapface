@@ -8,7 +8,7 @@ import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.com
 const routes: Routes = [
   { path: 'facesnaps/:id', component: SingleFaceSnapComponent },
   { path: 'facesnaps', component: FaceSnapListComponent },
-  { path: 'addfacesnap', component: AddSnapFaceComponent},
+  // { path: 'addfacesnap', component: AddSnapFaceComponent},
   { path: '', component: LandingPageComponent },
 ];
 

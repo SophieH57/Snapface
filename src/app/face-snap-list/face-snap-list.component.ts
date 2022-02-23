@@ -9,10 +9,16 @@ import { FaceSnapsService } from '../services/face-snaps.service';
 })
 export class FaceSnapListComponent implements OnInit {
   faceSnaps!: FaceSnap[];
+  public errorMsg!: string;
 
   constructor(private faceSnapsService: FaceSnapsService) {}
 
   ngOnInit(): void {
-    this.faceSnaps = this.faceSnapsService.getAllFaceSnaps();
+    this.faceSnapsService.getAllFaceSnaps().subscribe({
+      next: (data: FaceSnap[]) => {
+        this.faceSnaps = data;
+      },
+      error: (err) => (this.errorMsg = err),
+    });
   }
 }

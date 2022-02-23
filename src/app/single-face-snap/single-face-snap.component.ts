@@ -21,14 +21,20 @@ export class SingleFaceSnapComponent implements OnInit {
   titleButton!: string;
   snapped!: boolean;
 
-  constructor(private faceSnapService: FaceSnapsService,
-              private activeRoute: ActivatedRoute) {}
+  constructor(
+    private faceSnapService: FaceSnapsService,
+    private activeRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.titleButton = 'Oh Snap!';
     this.snapped = false;
     const parametreId = +this.activeRoute.snapshot.params['id'];
-    this.faceSnap = this.faceSnapService.getSnapById(parametreId);
+    this.faceSnapService.getSnapById(parametreId).subscribe({
+      next: (data: FaceSnap) => {
+        this.faceSnap = data;
+      },
+    });
   }
 
   onSnap() {
@@ -42,8 +48,4 @@ export class SingleFaceSnapComponent implements OnInit {
       this.snapped = false;
     }
   }
-
-  
-
-
 }

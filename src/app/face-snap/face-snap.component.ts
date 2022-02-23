@@ -21,8 +21,10 @@ export class FaceSnapComponent implements OnInit {
   titleButton!: string;
   snapped!: boolean;
 
-  constructor(private faceSnapService: FaceSnapsService,
-              private router: Router) {}
+  constructor(
+    private faceSnapService: FaceSnapsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.titleButton = 'Oh Snap!';
@@ -43,5 +45,5 @@ export class FaceSnapComponent implements OnInit {
 
   onViewFaceSnap() {
     this.router.navigateByUrl(`facesnaps/${this.faceSnap.id}`);
-}
+  }
 }

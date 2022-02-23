@@ -14,6 +14,7 @@ import { AuthService } from './services/auth.service';
 import { AuthComponent } from './auth/auth.component';
 import { AddSnapFaceComponent } from './add-snap-face/add-snap-face.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthComponent,
     AddSnapFaceComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }, AuthService],
   bootstrap: [AppComponent],
 })
