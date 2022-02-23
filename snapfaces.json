@@ -35,33 +35,6 @@
       "createdDate": 20220125,
       "snaps": 0,
       "location": "Metz"
-    },
-    {
-      "id": 5,
-      "title": "Ecureuil et mais",
-      "description": "un écureuil qui mange",
-      "imageUrl": "https://tse3.mm.bing.net/th?id=OIP.Wwg5-gXddv7O6NA7mnm8iwHaDw&pid=Api&P=0&w=311&h=158",
-      "createdDate": 20211004,
-      "snaps": 0,
-      "location": "Strasbourg"
-    },
-    {
-      "id": 6,
-      "title": "Loutre surprise",
-      "description": "une loutre surprise",
-      "imageUrl": "https://tse1.mm.bing.net/th?id=OIP.s3FgNFeNeWdMYfuefUUvXgHaE7&pid=Api&P=0&w=231&h=153",
-      "createdDate": 20210425,
-      "snaps": 0,
-      "location": "Strasbourg"
-    },
-    {
-      "title": "Je suis le roi du monde",
-      "description": "parodie de Titanic par un chimpanzé",
-      "imageUrl": "https://www.pixfan.com/wp-content/uploads/2019/09/Ryan-Jefferds_Im-Open_00002375-1068x1335.jpg",
-      "createdDate": "23/02/2022",
-      "location": "Metz",
-      "snaps": 1,
-      "id": 7
     }
   ]
 }

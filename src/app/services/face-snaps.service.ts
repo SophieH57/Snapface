@@ -45,6 +45,10 @@ export class FaceSnapsService {
     // snapType === 'snap' ? selectFaceSnap.snaps++ : selectFaceSnap.snaps--;
   }
 
+  snapDelete(snapASupprimer: FaceSnap) {
+    return this.http.delete(this.SNAP_API_URL + `/${snapASupprimer.id}`);
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.

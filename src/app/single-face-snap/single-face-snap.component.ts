@@ -50,4 +50,8 @@ export class SingleFaceSnapComponent implements OnInit {
       this.snapped = false;
     }
   }
+
+  deleteSnap() {
+    this.faceSnapService.snapDelete(this.faceSnap).subscribe();
+  }
 }
