@@ -18,7 +18,6 @@ export class AddSnapFaceComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.fs = new FaceSnap();
 
     this.addForm = this.fb.group({
       title: [],
@@ -26,14 +25,11 @@ export class AddSnapFaceComponent implements OnInit {
       imageUrl: [],
       createdDate: [],
       location: [],
+      snaps: 0,
     });
   }
 
   onSubmit() {
-    console.log(this.addForm.value);
-  }
-
-  save() {
-    this.faceSnapsService.postSnap(this.fs).subscribe();
+    this.faceSnapsService.postSnap(this.addForm.value).subscribe();
   }
 }

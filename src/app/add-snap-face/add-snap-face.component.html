@@ -2,30 +2,27 @@
     <form [formGroup] ="addForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="title">Titre du Snap</label>
-            <input type="text" id="title" class="form-control" formControlName="title" [(ngModel)]="fs.id">
+            <input type="text" id="title" class="form-control" formControlName="title">
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <input type="text" id="description" class="form-control" formControlName="description" [(ngModel)]="fs.description">
+            <input type="text" id="description" class="form-control" formControlName="description">
         </div>
         <div class="form-group">
             <label for="imageUrl">Url de l'image</label>
-            <input type="text" id="imageUrl" class="form-control" formControlName="imageUrl" [(ngModel)]="fs.imageUrl">
+            <input type="text" id="imageUrl" class="form-control" formControlName="imageUrl">
         </div>
         <div class="form-group">
             <label for="createdDate">Date de la prise de vue</label>
-            <input type="text" id="createdDate" class="form-control" formControlName="createdDate" [(ngModel)]="fs.createdDate">
+            <input type="text" id="createdDate" class="form-control" formControlName="createdDate">
         </div>
         <div class="form-group">
             <label for="location">Lieu de la prise de vue</label>
-            <input type="text" id="location" class="form-control" formControlName="location" [(ngModel)]="fs.location">
+            <input type="text" id="location" class="form-control" formControlName="location">
         </div>
-        <button type="submit" (click)="save()">Enregistrer</button>
+        <button type="submit">Enregistrer</button>
     </form>
 
     <a routerLink="/facesnaps">Back</a>
     
-    <pre>
-        {{addForm.value | json}}
-    </pre>
 </div>

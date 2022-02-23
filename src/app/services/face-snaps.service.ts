@@ -30,16 +30,19 @@ export class FaceSnapsService {
       catchError(this.handleError)
     );
   }
-  //     (faceSnaps) => faceSnaps.id === faceSnapId
-  //   );
-  //   if (!selectedFaceSnap) {
-  //     throw new Error('FaceSnap not found!');
-  //   } else {
-  //     return selectedFaceSnap;
-  //   }
 
   postSnap(nouveauSnap: FaceSnap) {
     return this.http.post(this.SNAP_API_URL, nouveauSnap);
+  }
+
+  snapFaceSnapById(
+    fs: FaceSnap,
+    snapType: 'snap' | 'unsnap'
+  ): Observable<FaceSnap> {
+    snapType === 'snap' ? fs.snaps++ : fs.snaps--;
+    return this.http.put<FaceSnap>(this.SNAP_API_URL + `/${fs.id}`, fs);
+    // const selectFaceSnap = this.getSnapById(faceSnapId);
+    // snapType === 'snap' ? selectFaceSnap.snaps++ : selectFaceSnap.snaps--;
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -58,10 +61,5 @@ export class FaceSnapsService {
     return throwError(
       () => new Error('Something bad happened; please try again later.')
     );
-  }
-
-  snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
-    // const selectFaceSnap = this.getSnapById(faceSnapId);
-    // snapType === 'snap' ? selectFaceSnap.snaps++ : selectFaceSnap.snaps--;
   }
 }
