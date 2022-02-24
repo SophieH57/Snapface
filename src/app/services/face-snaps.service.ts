@@ -8,8 +8,8 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class FaceSnapsService {
-  // private readonly SNAP_API_URL = `http://localhost:9000/facesnaps`;
-  private readonly SNAP_API_URL = `http://localhost:3000/snapfaces`;
+  private readonly SNAP_API_URL = `http://localhost:9000/facesnaps`;
+  // private readonly SNAP_API_URL = `http://localhost:3000/snapfaces`;
 
   constructor(private http: HttpClient) {}
 
@@ -40,13 +40,13 @@ export class FaceSnapsService {
     snapType: 'snap' | 'unsnap'
   ): Observable<FaceSnap> {
     snapType === 'snap' ? fs.snaps++ : fs.snaps--;
-    return this.http.put<FaceSnap>(this.SNAP_API_URL + `/${fs.id}`, fs);
+    return this.http.put<FaceSnap>(this.SNAP_API_URL + `/${fs.idSnap}`, fs);
     // const selectFaceSnap = this.getSnapById(faceSnapId);
     // snapType === 'snap' ? selectFaceSnap.snaps++ : selectFaceSnap.snaps--;
   }
 
   snapDelete(snapASupprimer: FaceSnap) {
-    return this.http.delete(this.SNAP_API_URL + `/${snapASupprimer.id}`);
+    return this.http.delete(this.SNAP_API_URL + `/${snapASupprimer.idSnap}`);
   }
 
   private handleError(error: HttpErrorResponse) {
