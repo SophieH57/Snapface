@@ -1,4 +1,8 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FaceSnap } from '../models/face-snap.model';
 import { Observable, throwError } from 'rxjs';
@@ -32,7 +36,9 @@ export class FaceSnapsService {
   }
 
   postSnap(nouveauSnap: FaceSnap) {
-    return this.http.post(this.SNAP_API_URL, nouveauSnap);
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(this.SNAP_API_URL, nouveauSnap, { headers: headers });
   }
 
   snapFaceSnapById(
@@ -41,8 +47,6 @@ export class FaceSnapsService {
   ): Observable<FaceSnap> {
     snapType === 'snap' ? fs.snaps++ : fs.snaps--;
     return this.http.put<FaceSnap>(this.SNAP_API_URL + `/${fs.idSnap}`, fs);
-    // const selectFaceSnap = this.getSnapById(faceSnapId);
-    // snapType === 'snap' ? selectFaceSnap.snaps++ : selectFaceSnap.snaps--;
   }
 
   snapDelete(snapASupprimer: FaceSnap) {
