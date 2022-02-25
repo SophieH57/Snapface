@@ -1,40 +1,40 @@
 {
   "snapfaces": [
     {
-      "id": 1,
+      "idSnap": 1,
       "title": "ourson",
-      "description": "Ours en peluche dans l'herbe",
       "imageUrl": "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg",
       "createdDate": 20200512,
       "snaps": 151,
-      "location": "Metz"
+      "location": "Metz",
+      "utilisateur": "Emrys"
     },
     {
-      "id": 2,
+      "idSnap": 2,
       "title": "cheval qui se marre",
-      "description": "une photo de cheval qui a l'air de rire",
       "imageUrl": "https://tse1.mm.bing.net/th?id=OIP.UGe0hDgOlhZCZJhjMiiCjwHaEK&pid=Api&P=0&w=332&h=186",
       "createdDate": 20190624,
       "snaps": 30,
-      "location": "Paris"
+      "location": "Paris",
+      "utilisateur": "Emrys"
     },
     {
-      "id": 3,
+      "idSnap": 3,
       "title": "Chien à bigoudis",
-      "description": "un chien avec des bigoudis sur la tête",
       "imageUrl": "https://tse4.mm.bing.net/th?id=OIP.mUibgH7zai54OhVoxBwJIwHaE6&pid=Api&P=0&w=247&h=164",
       "createdDate": 20160816,
       "snaps": 60,
-      "location": "Paris"
+      "location": "Paris",
+      "utilisateur": "Emrys"
     },
     {
-      "id": 4,
+      "idSnap": 4,
       "title": "Singe qui tire la langue",
-      "description": "un singe qui se fout de ta gueule!",
       "imageUrl": "https://tse2.mm.bing.net/th?id=OIP.RGvbOLeN8QP51IZd2pUrfwHaFS&pid=Api&P=0&w=238&h=170",
       "createdDate": 20220125,
       "snaps": 0,
-      "location": "Metz"
+      "location": "Metz",
+      "utilisateur": "Emrys"
     }
   ]
 }

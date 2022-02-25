@@ -12,14 +12,14 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class FaceSnapsService {
-  private readonly SNAP_API_URL = `http://localhost:9000/facesnaps`;
+  private readonly SNAP_API_URL = `http://localhost:9000/`;
   // private readonly SNAP_API_URL = `http://localhost:3000/snapfaces`;
 
   constructor(private http: HttpClient) {}
 
   getAllFaceSnaps(): Observable<FaceSnap[]> {
     return this.http
-      .get<FaceSnap[]>(this.SNAP_API_URL)
+      .get<FaceSnap[]>(this.SNAP_API_URL + `facesnaps`)
       .pipe(
         tap(
           (FaceSnap) => console.log('FaceSnap :', FaceSnap),
@@ -29,16 +29,24 @@ export class FaceSnapsService {
   }
 
   getSnapById(faceSnapId: number): Observable<FaceSnap> {
-    return this.http.get<FaceSnap>(this.SNAP_API_URL + `/${faceSnapId}`).pipe(
-      tap((FaceSnap) => console.log(`FaceSnap ${faceSnapId} : `, FaceSnap)),
-      catchError(this.handleError)
-    );
+    return this.http
+      .get<FaceSnap>(this.SNAP_API_URL + `facesnaps/${faceSnapId}`)
+      .pipe(
+        tap((FaceSnap) => console.log(`FaceSnap ${faceSnapId} : `, FaceSnap)),
+        catchError(this.handleError)
+      );
   }
 
-  postSnap(nouveauSnap: FaceSnap) {
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post(this.SNAP_API_URL, nouveauSnap, { headers: headers });
+  postSnap(nouveauSnap: FaceSnap): Observable<FaceSnap> {
+    const headers = { 'content-type': 'application/json' };
+    console.log(nouveauSnap);
+    return this.http.post<FaceSnap>(
+      this.SNAP_API_URL + `addfacesnap`,
+      nouveauSnap,
+      {
+        headers: headers,
+      }
+    );
   }
 
   snapFaceSnapById(
@@ -46,11 +54,16 @@ export class FaceSnapsService {
     snapType: 'snap' | 'unsnap'
   ): Observable<FaceSnap> {
     snapType === 'snap' ? fs.snaps++ : fs.snaps--;
-    return this.http.put<FaceSnap>(this.SNAP_API_URL + `/${fs.idSnap}`, fs);
+    return this.http.put<FaceSnap>(
+      this.SNAP_API_URL + `facesnaps/${fs.idSnap}`,
+      fs
+    );
   }
 
   snapDelete(snapASupprimer: FaceSnap) {
-    return this.http.delete(this.SNAP_API_URL + `/${snapASupprimer.idSnap}`);
+    return this.http.delete(
+      this.SNAP_API_URL + `facesnaps/${snapASupprimer.idSnap}`
+    );
   }
 
   private handleError(error: HttpErrorResponse) {

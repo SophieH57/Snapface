@@ -30,7 +30,6 @@ export class AddSnapFaceComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.addForm.value);
     this.faceSnapsService.postSnap(this.addForm.value).subscribe();
   }
 }
