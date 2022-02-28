@@ -6,4 +6,5 @@ export class FaceSnap {
   createdDate!: Date;
   snaps!: number;
   location?: string;
+  utilisateur!: string;
 }

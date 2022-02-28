@@ -5,6 +5,7 @@
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" alt="">
     <p>La photo a été prise le {{faceSnap.createdDate | date:'d MMMM yyyy'}}</p>
     <p *ngIf="faceSnap.location">Photo prise à {{faceSnap.location}}</p>
+    <p>Cette photo a été ajoutée par {{this.faceSnap.utilisateur}}</p>
     <p class="btn">
         <button (click)="onSnap()">{{titleButton}}</button>
         <span [ngStyle] = "{color :'rgb(0,' + faceSnap.snaps*5 +',0)'}">👍{{faceSnap.snaps}}</span>

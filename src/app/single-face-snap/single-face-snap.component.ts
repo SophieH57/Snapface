@@ -17,6 +17,7 @@ export class SingleFaceSnapComponent implements OnInit {
   snaps!: number;
   imageUrl!: string;
   location?: string;
+  utilisateur!: string;
 
   titleButton!: string;
   snapped!: boolean;
