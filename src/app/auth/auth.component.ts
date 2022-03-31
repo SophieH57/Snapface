@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
@@ -9,6 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class AuthComponent implements OnInit {
   authStatus!: boolean;
+  authForm!: FormGroup;
 
   constructor(private authService: AuthService, private router: Router) {}
 

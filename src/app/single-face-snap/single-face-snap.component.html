@@ -10,5 +10,5 @@
         <button (click)="onSnap()">{{titleButton}}</button>
         <span [ngStyle] = "{color :'rgb(0,' + faceSnap.snaps*5 +',0)'}">👍{{faceSnap.snaps}}</span>
     </p>
-    <button (click)="deleteSnap()">Supprimer cette image</button>
+    <button *ngIf="faceSnap.utilisateur == 'Emrys'" (click)="deleteSnap()">Supprimer cette image</button>
 </div>
