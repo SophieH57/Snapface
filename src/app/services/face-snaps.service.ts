@@ -55,14 +55,14 @@ export class FaceSnapsService {
   ): Observable<FaceSnap> {
     snapType === 'snap' ? fs.snaps++ : fs.snaps--;
     return this.http.put<FaceSnap>(
-      this.SNAP_API_URL + `facesnaps/${fs.idSnap}`,
+      this.SNAP_API_URL + `facesnaps/${fs.id_snap}`,
       fs
     );
   }
 
   snapDelete(snapASupprimer: FaceSnap) {
     return this.http.delete(
-      this.SNAP_API_URL + `facesnaps/${snapASupprimer.idSnap}`
+      this.SNAP_API_URL + `facesnaps/${snapASupprimer.id_snap}`
     );
   }
 

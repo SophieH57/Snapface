@@ -1,5 +1,5 @@
 export class FaceSnap {
-  idSnap!: number;
+  id_snap!: number;
   title!: string;
   description!: string;
   imageUrl!: string;

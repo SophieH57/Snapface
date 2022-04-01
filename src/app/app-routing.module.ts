@@ -6,7 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
 
 const routes: Routes = [
-  { path: 'facesnaps/:idSnap', component: SingleFaceSnapComponent },
+  { path: 'facesnaps/:id_snap', component: SingleFaceSnapComponent },
   { path: 'facesnaps', component: FaceSnapListComponent },
   { path: 'addfacesnap', component: AddSnapFaceComponent },
   { path: '', component: LandingPageComponent },
